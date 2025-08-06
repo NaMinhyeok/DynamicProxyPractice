@@ -23,4 +23,10 @@ public class UserProxyCacheService implements UserService {
         }
         return userService.getById(id);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        userService.deleteById(id);
+        cache.remove(id); // 캐시에서도 제거
+    }
 }

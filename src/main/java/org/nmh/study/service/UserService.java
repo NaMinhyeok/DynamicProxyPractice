@@ -4,4 +4,5 @@ import org.nmh.study.model.User;
 
 public interface UserService {
     User getById(Long id);
+    void deleteById(Long id);
 }
